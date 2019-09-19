@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Web Chat Client</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+         <!-- Compiled and minified CSS -->
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+        <link rel="stylesheet" href="./materialize.css">
+        <link rel="stylesheet" href="./styles.css">
+        <script type="text/javascript" src="./index.js"></script>
+    </head>
+    <body class="blue-grey darken-4">
+    <div class="wide-container blue-grey darken-4">
+        <!-- NAVBAR -->
+        <nav class="nav-depth-3">
+            <div class="nav-wrapper cyan lighten-3">
+                <a href="#menu" class="left margin-left hide-on-large-only"><i class="large material-icons yellow-text text-lighten-1">dehaze</i></a>
+                <a href="/index.html" class="blue-grey-text text-darken-4 brand-logo center">Chat<i class="large material-icons yellow-text text-lighten-1 right">chat_bubble</i></a>
+                <a href="#login-modal" class="right margin-right modal-trigger hide-on-large-only"><i class="large material-icons yellow-text text-lighten-1">add_box</i></a>
+            </div>
+        </nav>
+
+         <!-- JOIN ROOM MODAL FOR SMALL SCREENS -->
+        <div id="login-modal" class="modal blue-grey darken-3 cyan-text text-lighten-1">
+            <div class="modal-content">
+                <h4>Join a Room</h4>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="usernameMobile" type="text" class="cyan-text text-lighten-1">
+                        <label for="usernameMobile">Enter username:</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                    <input id="roomMobile" type="text" class="cyan-text text-lighten-1">
+                    <label for="roomMobile">Enter room:</label>
+                </div>
+                </div>
+
+                <div class="row">
+                    <button class="btn waves-effect waves-light cyan lighten-1 modal-close" id="joinRoomMobile" type="submit">Submit
+                        <i class="material-icons right">check</i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row body">  
+
+            <!-- SIDEBAR -->
+            <div class="col l3 sidebar blue-grey darken-3 z-depth-3 cyan-text text-lighten-1 hide-on-med-and-down">
+                <div class="container">
+                    <div class="row">
+                        <h3 class="col s12 cyan-text text-lighten-1 center-align">Join a Room:</h3>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="username" type="text" class="cyan-text text-lighten-1">
+                            <label for="username">Enter username:</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="room" type="text" class="cyan-text text-lighten-1">
+                            <label for="room">Enter room:</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <button class="btn waves-effect waves-light cyan lighten-1" id="joinRoom" type="submit">Submit
+                            <i class="material-icons right">check</i>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- MESSAGE DISPLAY -->
+            <div class="col s12 l9 display">
+                <div class="messages blue-grey darken-3 z-depth-3">
+                    <h2 class="col s12 yellow-text text-lighten-1 center-align" id="roomName">Welcome to Chat!</h2>
+                    <div class="col s12">
+                        <ul class="tabs blue-grey darken-3" id="room-tabs">
+                            <!-- Tabs will be appended here when user joins room -->
+                        </ul>
+                    </div>
+                    <div class="col s12 border-top blue-grey darken-2 container" id="displayMessages">
+                        <div class="message">Join a room... </div>
+                    </div>
+                    <div class="row">
+                        <form class="col s12">
+                            <div class="border-top"></div>
+                            <div class="row margin-top">
+                                <div class="input-field col s10">
+                                    <i class="material-icons prefix">mode_edit</i>
+                                    <input id="userMessage" class="cyan-text text-lighten-1" type="text"> 
+                                    <label for="userMessage">Type message</label>
+                                </div>
+                                <button class="btn waves-effect waves-light col s1 lower-btn cyan lighten-3" id="sendUserMessage" type="submit">
+                                    <i class="material-icons">send</i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>  
+            </div>
+
+        <!-- End Row -->
+        </div>
+    <!-- End Container -->
+    </div>
+
+     <!-- Compiled and minified JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
+     
+    </body>
+</html>
